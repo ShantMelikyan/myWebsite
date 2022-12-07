@@ -1,0 +1,79 @@
+body{
+    min-height: 100vh;
+    background: linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%); 
+}
+
+h1 {
+    font-size: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 200;
+}
+.page-reveal { 
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+.page-reveal .element {
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-origin: bottom;
+}
+.page-reveal .element-1 {
+
+    background:  rgb(31, 31, 105);
+    transform: scaleY(0);
+    animation: revealAnim 2000ms ease;
+}
+
+.page-reveal .element-2 {
+
+    background:  rgb(243, 172, 40);
+    transform: scaleY(0);
+    animation: revealAnim 1000ms ease;
+    animation-delay: 900ms;
+}
+
+.page-reveal .element-3 {
+
+    background:  rgb(184, 6, 6); 
+    animation: revealContentAnim forwards;
+    animation-delay: 1000ms;
+}
+
+@keyframes revealAnim {
+    50% {
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    51% {
+        transform-origin: top;
+    }
+    100% {
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+    
+}
+
+@keyframes revealContentAnim {
+    to {
+        transform: scale(0);
+    }
+    
+}
+footer{
+    margin-top: 500px;
+}
+.alpha-bg{
+    color: #1d1e20;
+    text-align: center;
+   
+}
+.contact-info a{
+    text-decoration: none;
+}
